@@ -61,13 +61,16 @@ export const Board = () => {
                 setMessage(`Winner - Player ${player} : ${icon}`)
             }
         }
+        if (contents.every((content) => content !== undefined) && !hasEnded) {
+            setEnded(true);
+            setMessage("Draw");
+        }
     }
 
     const handleRestart = () => {
         setContent(Array(9).fill(undefined));
         setPlayer(1);
         setIcon("❌");
-        setWarning("");
         setEnded(false);
         setMessage("");
     }
