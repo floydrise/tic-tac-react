@@ -5,7 +5,6 @@ import {Footer} from "./Footer.jsx";
 export const Board = () => {
     const [contents, setContent] = useState(Array(9).fill(undefined));
     const [player, setPlayer] = useState(1);
-    const [warning, setWarning] = useState("");
     const [icon, setIcon] = useState("❌");
     const [hasEnded, setEnded] = useState(false);
     const [message, setMessage] = useState("");
@@ -16,7 +15,7 @@ export const Board = () => {
         if (player === 1 && contents[passedIndex] === undefined && !hasEnded) {
             setPlayer(2);
             setMessage("");
-            setIcon("⭕️")
+            setIcon("️🔵")
         } else if (player === 2 && contents[passedIndex] === undefined && !hasEnded) {
             setPlayer(1);
             setMessage("");
