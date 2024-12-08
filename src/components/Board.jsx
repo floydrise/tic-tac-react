@@ -59,11 +59,9 @@ export const Board = () => {
             if (contents[a] !== undefined && contents[a] === contents[b] && contents[b] === contents[c]) {
                 setEnded(true);
                 setMessage(`Winner - Player ${player} : ${icon}`)
+            } else if (contents.every((content) => content !== undefined)) {
+                setMessage("Draw");
             }
-        }
-        if (contents.every((content) => content !== undefined) && !hasEnded) {
-            setEnded(true);
-            setMessage("Draw");
         }
     }
 
