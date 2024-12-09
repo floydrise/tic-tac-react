@@ -17,4 +17,5 @@
 
 .box:hover {
     filter: drop-shadow(0 0 5px rgba(0, 139, 255, 0.77));
+    cursor: pointer;
 }
